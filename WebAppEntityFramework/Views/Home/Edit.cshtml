@@ -1,0 +1,37 @@
+﻿@model WebAppEntityFramework.Models.employee
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+@using (Html.BeginForm())
+{
+
+    @Html.HiddenFor(Model => Model.Id)
+    <br />
+    <div class="form-group">
+        <div >
+            <div class="form-group">
+                <label>Name</label>
+                @Html.EditorFor(Model => Model.EmpName)
+                <br />
+            </div>
+        </div>
+        <div class="form-group">            
+                <label>Address</label>
+                @Html.EditorFor(Model => Model.Address)
+                <br />            
+        </div>
+        <label>State</label>
+        @Html.EditorFor(Model => Model.State)
+        <br />
+        <label>City</label>
+        @Html.EditorFor(Model => Model.City)
+        <br />
+        <label>Email Id</label>
+        @Html.EditorFor(Model => Model.EmailId)
+        <br />
+    </div>
+        <input type="submit" name="Save Data" class="btn-danger" />
+        }
+    

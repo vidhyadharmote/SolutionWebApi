@@ -1,0 +1,32 @@
+﻿@model IEnumerable<WebAppEntityFramework.Models.OrderVM>
+@using WebAppEntityFramework.Models
+@{
+    ViewBag.Title = "Orders";
+}
+
+<h2>Orders using Left Join</h2>
+
+<div style="font-family:Arial">
+    @*<li>@Html.ActionLink("Create New", "Create")</li>*@
+    <table class="table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Item Name</th>               
+                <th>Price</th>
+                <th>Desc</th>
+            </tr>
+            @foreach (OrderVM orderDetails in @Model)
+            {
+                <tr>
+                    <td>@orderDetails.Id</td>
+                    <td>@orderDetails.ItemName</td>
+                    <td>@orderDetails.Price</td>
+                    <td>@orderDetails.Descr</td>
+
+                    @*<td>@Html.ActionLink("Edit", "Edit", new { id = emp.Id }) || @Html.ActionLink("Delete", "Delete", new { id = emp.Id })</td>*@
+                </tr>
+            }
+        </thead>
+    </table>
+</div>

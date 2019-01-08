@@ -1,0 +1,39 @@
+﻿@model WebAppEntityFramework.Models.employee
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <label>Id</label>
+            @Html.EditorFor(Model => Model.Id)
+            <br />
+            <label>Name</label>
+            @Html.EditorFor(Model => Model.EmpName)
+            <br />
+            <label>Address</label>
+            @Html.EditorFor(Model => Model.Address)
+            <br />
+            <label>State</label>
+            @Html.EditorFor(Model => Model.State)
+            <br />
+            <label>City</label>
+            @Html.EditorFor(Model => Model.City)
+            <br />
+            <label>Email Id</label>
+            @Html.EditorFor(Model => Model.EmailId)
+            <br />
+            <input type="submit" name="Save Data" class="btn-danger" />
+        }
+    </div>
+</body>
+</html>

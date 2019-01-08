@@ -1,0 +1,59 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<h2>Show</h2>
+
+<head>
+    <meta name="viewport" content="width-device-width" />
+    <title>
+        showData
+    </title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover table-condensed">
+            <thead>
+                <tr>
+                    <th>Student id</th>
+                    <th>Student Name</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>Email Id</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+               <div>
+                @{
+                    foreach (System.Data.DataRow dr in ViewBag.stud.Rows)
+                    {
+                        <tr>
+                            <td>@dr["id"]</td>
+                            <td>@dr["StudentName"]</td>
+                            <td>@dr["Address"]</td>
+                            <td>@dr["City"]</td>
+                            <td>@dr["EmailId"]</td>
+                            <td><a href="/Student/UpdateRecord?id=@dr["Id"]">Update</a></td>
+                            <td><a href="/Student/DeleteRecord?id=@dr["Id"]">Delete</a></td>
+                        </tr>
+                    }
+                }
+                </div>
+                @{
+                    if (TempData["msg"] != null)
+                    {
+                        <script>alert('@TempData["msg"]')</script>
+                    }
+                }
+            </tbody>
+        </table>
+
+    </div>
+</body>
+</html>

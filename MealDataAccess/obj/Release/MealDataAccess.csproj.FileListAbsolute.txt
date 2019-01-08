@@ -1,0 +1,11 @@
+C:\Users\dhana\source\repos\SolutionWebApi\MealDataAccess\bin\Release\MealDataAccess.dll.config
+C:\Users\dhana\source\repos\SolutionWebApi\MealDataAccess\bin\Release\MealDataAccess.dll
+C:\Users\dhana\source\repos\SolutionWebApi\MealDataAccess\bin\Release\MealDataAccess.pdb
+C:\Users\dhana\source\repos\SolutionWebApi\MealDataAccess\bin\Release\EntityFramework.dll
+C:\Users\dhana\source\repos\SolutionWebApi\MealDataAccess\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\dhana\source\repos\SolutionWebApi\MealDataAccess\bin\Release\EntityFramework.xml
+C:\Users\dhana\source\repos\SolutionWebApi\MealDataAccess\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\dhana\source\repos\SolutionWebApi\MealDataAccess\obj\Release\MealDataAccess.csproj.CoreCompileInputs.cache
+C:\Users\dhana\source\repos\SolutionWebApi\MealDataAccess\obj\Release\MealDataAccess.csproj.CopyComplete
+C:\Users\dhana\source\repos\SolutionWebApi\MealDataAccess\obj\Release\MealDataAccess.dll
+C:\Users\dhana\source\repos\SolutionWebApi\MealDataAccess\obj\Release\MealDataAccess.pdb

@@ -1,0 +1,42 @@
+﻿@model IEnumerable<WebAppEntityFramework.Models.employee>
+
+@using WebAppEntityFramework.Models;
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div style="font-family:Arial">
+    <li>@Html.ActionLink("Create New", "Create")</li>
+    <li>@Html.ActionLink("Left Join", "OrdersLeftJoin", "Order")</li>
+    <table class="table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>State</th>
+                <th>City</th>
+                <th>Email Id</th>
+            </tr>
+            @foreach (employee emp in @Model)
+            {
+                <tr>
+                    <td>@emp.Id</td>
+                    <td>@emp.EmpName</td>
+                    <td>@emp.Address</td>
+                    <td>@emp.State</td>
+                    <td>@emp.City</td>
+                    <td>@emp.EmailId</td>
+                    <td>@Html.ActionLink("Edit", "Edit", new { id = emp.Id }) || @Html.ActionLink("Delete", "Delete", new { id = emp.Id })</td>
+                </tr>
+            }
+        </thead>
+    </table>
+</div>
+@{
+    if (TempData["msg"] != null)
+    {
+        <script>alert('@TempData["msg"]')</script>
+    }
+}
+

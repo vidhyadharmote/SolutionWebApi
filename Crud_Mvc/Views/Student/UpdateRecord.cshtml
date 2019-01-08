@@ -1,0 +1,60 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UpdateRecord</title>
+</head>
+<body>
+    @{
+        foreach (System.Data.DataRow dr in ViewBag.studrecord.Rows)
+        {
+            <div>
+                <div>
+                    <form method="post">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding -right">Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" value="@dr["StudentName"]" name="Name" class="col-xs-1 col-sm-8" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding -right">Address</label>
+                            <div class="col-sm-9">
+                                <input type="text" value="@dr["Address"]" name="Address" class="col-xs-1 col-sm-8" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding -right">City</label>
+                            <div class="col-sm-9">
+                                <input type="text" value="@dr["City"]" name="City" class="col-xs-1 col-sm-8" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding -right">Email Id</label>
+                            <div class="col-sm-9">
+                                <input type="text" value="@dr["EmailId"]" name="EmailId" class="col-xs-1 col-sm-8" />
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+
+                            <div class="col-sm-9">
+                                <input type="submit" value="Submit" class="btn btn-primary" />
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        }
+    }
+
+</body>
+</html>
